@@ -1,0 +1,9 @@
+base
+foreign
+gdata
+sp
+maptools
+rgeos
+rgdal
+ggplot2
+xtable
