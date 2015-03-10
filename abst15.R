@@ -45,7 +45,7 @@ e$id <- 1:nrow(e)
 
 map.e <- merge(map, e, by.x = 'idnum', by.y = 'id', all.x = TRUE)
 
-e.f <- ggplot(map.e, aes(long, lat, group = group, fill = yesperc)) + geom_polygon(colour='white') +
+e_f <- ggplot(map.e, aes(long, lat, group = group, fill = yesperc)) + geom_polygon(colour='white') +
   coord_equal() + labs(x = NULL, y = NULL, fill = "% Ja") +
   ggtitle("Volksinitiative 'Energie- statt Mehrwertsteuer'") +
   scale_fill_gradient(low = "linen", high = "red2") +
@@ -68,7 +68,7 @@ f$id <- 1:nrow(f)
 
 map.f <- merge(map, f, by.x = 'idnum', by.y = 'id', all.x = TRUE)
 
-f.f <-
+f_f <-
   ggplot(map.f, aes(long, lat, group = group, fill = yesperc)) + geom_polygon(colour='white') +
   coord_equal() + labs(x = NULL, y = NULL, fill = "% Ja") +
   ggtitle("Volksinitiative 'Familien stärken! Steuerfreie Kinder- und Ausbildungszulagen'") +

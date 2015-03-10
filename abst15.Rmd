@@ -2,10 +2,14 @@
 title: "Das Schweizer Stimmvolk sagt zweimal 'Nein!'"
 author: "Arndt Leininger"
 date: "March 9, 2015"
-output: 
+output:
   html_document:
-    lib_dir: libs
-    self_contained: no
+    lib_dir:
+    - libs
+    self_contained:
+    - no
+  pdf_document:
+  - default
 ---
 
 
@@ -57,8 +61,8 @@ denken mag. Nur die wenigsten Volksinitiativen sind tatsächlich erfolgreich,
 werden von einer Mehrheit der Schweizer BürgerInnen (*Volksmehr*) und Kantone 
 (*Ständemehr*) angenommen. 
 
-```{r, e.f, echo=FALSE, cache=TRUE}
-print(e.f)
+```{r, e_f, echo=FALSE}
+print(e_f)
 ```
 
 Auch am Sonntag zeigte sich erneut die Schwierigkeit, die BürgerInnen von einer Änderung
@@ -88,8 +92,8 @@ zu erlangen. Im Oktober 2015 findet in der Schweiz die [Nationalratswahl](https:
 diskutiert, ob den Parteien das Recht Volksinitiativen zu lancieren verwährt werden sollte - jedoch
 mit ähnlicher Konsequenz wie über die Einführung Direkter Demokratie in Deutschland diskutiert wird.
 
-```{r, f.f, echo=FALSE, cache=TRUE}
-print(f.f)
+```{r, f_f, echo=FALSE}
+print(f_f)
 ```
 
 Für die Grünliberal Partei war es die erste Volksnitiave überhaupt. Sie erfuhr 
@@ -122,7 +126,7 @@ erspart.
 
 ```{r, tabelle, echo=FALSE, results='asis'}
 names(tab) <- c('Datum', 'Typ', 'Titel', '% Ja')
-print(xtable(tab), digits = 2, type = 'html', include.rownames = FALSE)
+print(xtable(tab), digits = 2,type = 'html', include.rownames = FALSE)
 ```
 
 Das Ergebnis ist sogar das schlechteste Ergebnis seit Einführung des Frauenstimmrechts.
@@ -136,7 +140,7 @@ Am 14. Juni 2015 werden die SchweizerInnen erneut zur Abstimmung gebeten - diesm
 *[Arndt Leininger](http://www.hertie-school.org/facultyandresearch/faculty-researchers/phd-students-doctoral-programme-in-governance/more-about-out-phd-students/arndt-leininger/) ist Doktorand an der Hertie School of Governance. Seine Forschungsschwerpunkte sind Direkte Demokratie, Vergleichende Politikwissenschaft, Repräsentation und Wahlforschung. Arndt hat einen MSc in Political Science and Political Economy der London School of Economics and Political Science und einen Bachelorabschluss in Politikwissenschaft der Freien Universität Berlin. Zwischen 2012 und 2013 hat er als Wissenschaftlicher Mitarbeiter von Sven-Christian Kindler, MdB gearbeitet.*
 Twitter: [\@a_leininger](https://twitter.com/a_leininger)
 
-Daten und Code zur Reproduktion der Karten und Tabelle finden sich auf: [GitHub](). Shapefiles
+Daten und Code zur Reproduktion der Karten und Tabelle finden sich auf: [GitHub](https://github.com/aleininger/abst15). Shapefiles
 von [ArcGIS](http://www.arcgis.com/home/item.html?id=a5067fb3b0b74b188d7b650fa5c64b39). 
 Abstimmungsergebnisse von [Statistik Schweiz](http://www.bfs.admin.ch/bfs/portal/de/index/themen/17/03/blank/key/2015/01.html). 
 
